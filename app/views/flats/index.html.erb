@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Flats</h1>
+
+
+
+  <% @condos.each do |condo| %>
+    <div class="card">
+     
+      <img src="<%= condo['imageUrl'] %>" alt="" width="300px">
+     
+      <%= link_to condo["name"], condo_path(condo["id"]) %>
+      <p>US$ <%= condo["price"] %></p>
+    </div>
+  <% end %>
+</div>
